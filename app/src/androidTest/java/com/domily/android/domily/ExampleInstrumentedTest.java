@@ -1,4 +1,4 @@
-package com.codigoquetzal.android.domily;
+package com.domily.android.domily;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.codigoquetzal.android.domily", appContext.getPackageName());
+        assertEquals("com.domily.android.domily", appContext.getPackageName());
     }
 }

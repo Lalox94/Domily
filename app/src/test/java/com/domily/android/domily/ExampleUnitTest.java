@@ -1,4 +1,4 @@
-package com.codigoquetzal.android.domily;
+package com.domily.android.domily;
 
 import org.junit.Test;
 

@@ -8,14 +8,14 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:317688481665:android:34afb23f55a12cc6",
+        "mobilesdk_app_id": "1:317688481665:android:4c46d1b3ee12c4b4",
         "android_client_info": {
           "package_name": "com.domily.android.domily"
         }
       },
       "oauth_client": [
         {
-          "client_id": "317688481665-qf8n7n37kl5s3es7tpq2ps0f9qg8g8o4.apps.googleusercontent.com",
+          "client_id": "317688481665-0js66k4apj1r3fgfm09ose1j0aftghsb.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.domily.android.domily",

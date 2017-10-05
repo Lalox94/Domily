@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "317688481665",
+    "firebase_url": "https://domily-d33bb.firebaseio.com",
+    "project_id": "domily-d33bb",
+    "storage_bucket": "domily-d33bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317688481665:android:34afb23f55a12cc6",
+        "android_client_info": {
+          "package_name": "com.codigoquetzal.android.domily"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "317688481665-qf8n7n37kl5s3es7tpq2ps0f9qg8g8o4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codigoquetzal.android.domily",
+            "certificate_hash": "29df2d1e5c3a4dcad3937304b5bb432486102b9a"
+          }
+        },
+        {
+          "client_id": "317688481665-a3942im8cfksa4luisijs29i592pv9c6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2k31lMxUl112e19-Ujt_C46kO9Qmbkhg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "317688481665-a3942im8cfksa4luisijs29i592pv9c6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

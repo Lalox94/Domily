@@ -12,5 +12,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Send Message"/>
+    <Button
+        android:id="@+id/ButtonSubscribe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Subscribe"
+        android:layout_below="@+id/ButtonSendMessage"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <Button
+        android:id="@+id/ButtonUnsubscribe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Unsubscribe"
+        android:layout_below="@+id/ButtonSubscribe"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"/>
+    <EditText
+        android:id="@+id/EditTextSend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ButtonUnsubscribe"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="27dp"/>
 
 </RelativeLayout>

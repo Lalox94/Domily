@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
     // LAYOUT
     private Button mButtonBuscarTienda;
+    private Button mButtonRegistrarTienda;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(MainActivity.this, TiendaActivity.class);
+                startActivity(i);
+            }
+        });
+        mButtonRegistrarTienda = (Button)findViewById(R.id.ButtonRegistrarTienda);
+        mButtonRegistrarTienda.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MainActivity.this, RegistrarTienda.class);
                 startActivity(i);
             }
         });

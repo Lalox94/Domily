@@ -31,6 +31,8 @@
         </activity>
         <activity android:name=".Activities.ProductoActivity">
         </activity>
+        <activity android:name=".Activities.RegistrarTienda">
+        </activity>
     </application>
 
 </manifest>

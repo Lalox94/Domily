@@ -1,10 +1,14 @@
-package com.domily.android.domily;
+package com.domily.android.domily.Activities;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.widget.Toast;
+
+import com.domily.android.domily.R;
+import com.domily.android.domily.Adapters.TiendaAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +34,8 @@ public class TiendaActivity extends AppCompatActivity {
         mAdapter = new TiendaAdapter(mNombres, R.layout.recycler_view_tienda, new TiendaAdapter.OnItemClickListener(){
             @Override
             public void onItemClick(String name, int position) {
-                Toast.makeText(TiendaActivity.this, name +" - "+ position, Toast.LENGTH_LONG).show();
+                Intent i = new Intent(TiendaActivity.this, ProductoActivity.class);
+                startActivity(i);
             }
         });
 

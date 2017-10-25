@@ -1,10 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.domily.android.domily.Activities.RegistrarTienda">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/textViewRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Registro"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textViewNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textViewRegistro"
+        android:layout_marginTop="43dp"
+        android:fontFamily="sans-serif"
+        android:text="Nombre de la Tienda"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/editTextNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textViewNombre"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"/>
+
+    <TextView
+        android:id="@+id/textViewUbicacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editTextNombre"
+        android:layout_marginTop="28dp"
+        android:fontFamily="sans-serif"
+        android:text="Ubicación"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/textViewUbicacionActual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textViewUbicacion"
+        android:layout_marginTop="28dp"
+        android:fontFamily="sans-serif"
+        android:text="Ubicación Actual"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/buttonUbicacionActual"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textViewUbicacion"
+        android:layout_alignBottom="@+id/textViewUbicacion"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@+id/textViewNombre"
+        android:layout_toRightOf="@+id/textViewNombre"
+        android:text="Mi Ubicación"/>
+
+    <TextView
+        android:id="@+id/textViewTelefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textViewUbicacionActual"
+        android:layout_marginTop="28dp"
+        android:fontFamily="sans-serif"
+        android:text="Telefono"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/editTextTelefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editTextNombre"
+        android:layout_alignRight="@+id/editTextNombre"
+        android:layout_below="@+id/textViewTelefono"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"/>
+
+    <TextView
+        android:id="@+id/textViewImagen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/editTextTelefono"
+        android:layout_marginTop="28dp"
+        android:fontFamily="sans-serif"
+        android:text="Imagen"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/editTextImagen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/editTextNombre"
+        android:layout_alignRight="@+id/editTextNombre"
+        android:layout_below="@+id/textViewImagen"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"/>
+
+    <Button
+        android:id="@+id/buttonHehco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextImagen"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:text="Hecho"/>
+
+
+</RelativeLayout>

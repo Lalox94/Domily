@@ -1,10 +1,14 @@
 package com.domily.android.domily.Fragments;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.location.Location;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,6 +31,7 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
     private GoogleMap mGMap;
     private Button mConfirmarUbicacion;
     LatLng place;
+    Location mLocation;
 
     public MapFragment() {  }
 
@@ -39,9 +44,11 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
         mConfirmarUbicacion.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // Regresa la ubicación exacta de el dispositivo
+                mLocation = mGMap.getMyLocation();
                 Intent i = new Intent(getActivity(), RegistrarTienda.class);
-                i.putExtra("longitud", String.valueOf(place.longitude));
-                i.putExtra("latitud",String.valueOf(place.latitude));
+                i.putExtra("longitud", String.valueOf(mLocation.getLongitude()));
+                i.putExtra("latitud",String.valueOf(mLocation.getLatitude()));
                 startActivity(i);
             }
         });
@@ -51,7 +58,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-
         mMapView = (MapView) mRootView.findViewById(R.id.map);
         if (mMapView != null) {
             // Ciclo de vida
@@ -64,7 +70,13 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap googleMap) {
         mGMap = googleMap;
-
+        //Agrega la ubicacion Exacta de el dispositivo
+        if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.ACCESS_FINE_LOCATION)
+                == PackageManager.PERMISSION_GRANTED) {
+            mGMap.setMyLocationEnabled(true);
+        } else {
+            // Show rationale and request permission.
+        }
         place = new LatLng(19.0133,-98.3933); // Puebla
         mGMap.addMarker(new MarkerOptions().position(place).title("Marcador in Puebla"));
 
@@ -76,5 +88,6 @@ public class MapFragment extends Fragment implements OnMapReadyCallback {
                 .build();       // limite -> 90
         mGMap.animateCamera(CameraUpdateFactory.newCameraPosition(camara));
     }
+
 
 }
